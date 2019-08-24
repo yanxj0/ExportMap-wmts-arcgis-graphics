@@ -64,7 +64,7 @@ arcgis服务只需添加一个即可，我们只是需要map初始化完成后�
 - `export-success`：成功导出事件
 
 ### 方法
-- `downLoad(base64Url)` ：将上述事件接收的返回值传入即可下载(依赖FileSaver.js，多规和一张图中都有引入，可直接使用)
+- `downLoad(base64Url)` ：将上述事件接收的返回值传入即可下载(依赖FileSaver.js)
 
 
 ### 实例化
