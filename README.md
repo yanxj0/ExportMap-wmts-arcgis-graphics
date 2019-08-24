@@ -88,20 +88,6 @@ var exportImg = new ExportMapImg({
     });
 ```
 
-**[注]报告图片获取传入scale说明**
-```javascript
-require([
-  "esri/geometry/scaleUtils", ... 
-], function(scaleUtils, ... ) {
-  var scale = scaleUtils.getScale(extent, width/2);
-});
-```
-`getScale`官方api文档只有传入map一个参数，从源码看可以传入3个参数，并且有两种计算方式：  
-
-- `getScale(map, extent)`： 传入map和extent(方法内部根据`map.width`计算)
-- `getScale(extent, width)`：传入extent和width(`width推荐使用截图宽度的1/2`，可以自行测试调整)
-- 第三个参数是`SpatialReference`对象，因个人测试的`wkid(4490)`计算返回`undefined`(`scaleUtils.getUnitValue(extent.spatialReference)`)，就未深究。如条件允许可以测试一下
-
 **[注]export接口默认支持最大2048px*2048px的图片输出，需修改服务设置以支持更大尺寸的图片输出**    
 
 ![设置](images/20181214143427.png)
